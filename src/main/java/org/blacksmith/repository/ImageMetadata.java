@@ -1,7 +1,12 @@
 package org.blacksmith.repository;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.time.Instant;
 
+@Document("image_metadata")
 public record ImageMetadata(
         String originalName,
         String storedName,
@@ -9,6 +14,5 @@ public record ImageMetadata(
         String ownerId,
         long size,
         Instant createdAt,
-        ObjectId id
-) {
-}
+        @Id ObjectId id
+    ) {}
