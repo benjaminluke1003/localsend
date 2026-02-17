@@ -13,7 +13,7 @@ public record ImageStorageProperties(
 ) {
     public ImageStorageProperties() {
         this(
-                "./images",
+                "/home/blacksmithoffire/Pictures/localsendPictures",
                 Set.of(
                         "image/jpeg",
                         "image/png",
